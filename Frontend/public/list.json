@@ -1,0 +1,132 @@
+[
+    {
+        "id":1,
+        "name":"Tausif",
+        "title":"Mobile Killer",
+        "price":100,
+        "category":"Paid",
+        "image":"https://marketplace.canva.com/EAFfSnGl7II/2/0/1003w/canva-elegant-dark-woods-fantasy-photo-book-cover-vAt8PH1CmqQ.jpg"
+    },
+    {
+        "id":1,
+        "name":"Tausif",
+        "title":"About Himanity",
+        "price":50,
+        "category":"Paid",
+        "image":"https://marketplace.canva.com/EAFfSnGl7II/2/0/1003w/canva-elegant-dark-woods-fantasy-photo-book-cover-vAt8PH1CmqQ.jpg"
+    },
+    {
+        "id":1,
+        "name":"Story Book",
+        "title":"CAA NRC in India",
+        "price":250,
+        "category":"paid",
+        "image":"https://marketplace.canva.com/EAFaQMYuZbo/1/0/1003w/canva-brown-rusty-mystery-novel-book-cover-hG1QhA7BiBU.jpg"
+    },
+    {
+        "id":1,
+        "name":"Story Book",
+        "title":"Country",
+        "price":90,
+        "category":"paid",
+        "image":"https://marketplace.canva.com/EAFaQMYuZbo/1/0/1003w/canva-brown-rusty-mystery-novel-book-cover-hG1QhA7BiBU.jpg"
+    },
+    {
+        "id":1,
+        "name":"Tausif",
+        "title":"Mobile Killer",
+        "price":100,
+        "category":"Paid",
+        "image":"https://marketplace.canva.com/EAFfSnGl7II/2/0/1003w/canva-elegant-dark-woods-fantasy-photo-book-cover-vAt8PH1CmqQ.jpg"
+    },
+    {
+        "id":1,
+        "name":"Story Book",
+        "title":"Country",
+        "price":90,
+        "category":"Free",
+        "image":"https://marketplace.canva.com/EAFaQMYuZbo/1/0/1003w/canva-brown-rusty-mystery-novel-book-cover-hG1QhA7BiBU.jpg"
+    },
+    {
+        "id":1,
+        "name":"Story Book",
+        "title":"Country",
+        "price":90,
+        "category":"Free",
+        "image":"https://marketplace.canva.com/EAFfSnGl7II/2/0/1003w/canva-elegant-dark-woods-fantasy-photo-book-cover-vAt8PH1CmqQ.jpg"
+    },
+    
+    {
+        "id":1,
+        "name":"Tausif",
+        "title":"About Himanity",
+        "price":50,
+        "category":"Paid",
+        "image":"https://marketplace.canva.com/EAFfSnGl7II/2/0/1003w/canva-elegant-dark-woods-fantasy-photo-book-cover-vAt8PH1CmqQ.jpg"
+    },
+    {
+        "id":1,
+        "name":"Story Book",
+        "title":"Country",
+        "price":90,
+        "category":"Free",
+        "image":"https://marketplace.canva.com/EAFfSnGl7II/2/0/1003w/canva-elegant-dark-woods-fantasy-photo-book-cover-vAt8PH1CmqQ.jpg"
+    },
+    {
+        "id":1,
+        "name":"Story Book",
+        "title":"CAA NRC in India",
+        "price":250,
+        "category":"Free",
+        "image":"https://marketplace.canva.com/EAFaQMYuZbo/1/0/1003w/canva-brown-rusty-mystery-novel-book-cover-hG1QhA7BiBU.jpg"
+    },
+    {
+        "id":1,
+        "name":"Story Book",
+        "title":"Country",
+        "price":90,
+        "category":"Free",
+        "image":"https://marketplace.canva.com/EAFfSnGl7II/2/0/1003w/canva-elegant-dark-woods-fantasy-photo-book-cover-vAt8PH1CmqQ.jpg"
+    },
+    {
+        "id":1,
+        "name":"Tausif",
+        "title":"About Himanity",
+        "price":50,
+        "category":"Paid",
+        "image":"https://marketplace.canva.com/EAFaQMYuZbo/1/0/1003w/canva-brown-rusty-mystery-novel-book-cover-hG1QhA7BiBU.jpg"
+    },
+    {
+        "id":1,
+        "name":"Story Book",
+        "title":"CAA NRC in India",
+        "price":250,
+        "category":"paid",
+        "image":"https://marketplace.canva.com/EAFfSnGl7II/2/0/1003w/canva-elegant-dark-woods-fantasy-photo-book-cover-vAt8PH1CmqQ.jpg"
+    },
+    {
+        "id":1,
+        "name":"Story Book",
+        "title":"Country",
+        "price":90,
+        "category":"Free",
+        "image":"https://marketplace.canva.com/EAFaQMYuZbo/1/0/1003w/canva-brown-rusty-mystery-novel-book-cover-hG1QhA7BiBU.jpg"
+    },
+    
+    {
+        "id":1,
+        "name":"Tausif",
+        "title":"About Himanity",
+        "price":50,
+        "category":"Paid",
+        "image":"https://marketplace.canva.com/EAFfSnGl7II/2/0/1003w/canva-elegant-dark-woods-fantasy-photo-book-cover-vAt8PH1CmqQ.jpg"
+    },
+    {
+        "id":1,
+        "name":"Story Book",
+        "title":"CAA NRC in India",
+        "price":250,
+        "category":"paid",
+        "image":"https://marketplace.canva.com/EAFaQMYuZbo/1/0/1003w/canva-brown-rusty-mystery-novel-book-cover-hG1QhA7BiBU.jpg"
+    }
+]
