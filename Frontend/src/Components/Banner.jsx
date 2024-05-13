@@ -7,7 +7,7 @@ function Banner() {
       <div className='max-w-screen-2x1 container max-auto md:px-20 px-4 flex flex-col md:flex-row'>
         <div className='w-full order-2 md:order-1 md:w-1/2 mt-12 md:mt-32'> 
           <div className='space-y-12'> 
-            <h1 className='text-3xl font-bold'> Hello, welcome here to learn something <span className='text-pink-500'>new every day!!!</span></h1>
+            <h1 className='text-3xl font-bold'> Hello, welcome here to learn something <span className='text-blue-500'>new every day!!!</span></h1>
             <p className='text-x1'>
               Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
               Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
@@ -23,7 +23,7 @@ function Banner() {
               <input type="text" className="grow " placeholder="Email" />
             </label>
           </div>
-          <button className="btn btn-secondary mt-6">Secondary</button>
+          <button className="btn btn-primary mt-6 dark:bg-black dark:text-white dark:border-white">Subscribe</button>
         </div>
 
         <div className='w-full order-1 md:w-1/2 md:mt-32 '>

@@ -1,61 +1,125 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { useForm } from 'react-hook-form';
-import Login from './Login';
+import React from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import Login from "./Login";
+import { useForm } from "react-hook-form";
+import axios from "axios";
+import toast from "react-hot-toast";
 
 function Signup() {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const from = location.state?.from?.pathname || "/";
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => {
-    console.log(data); // Log the form data to the console
-    // You can add logic here to handle form submission, such as sending the data to a server
+  const onSubmit = async (data) => {
+    const userInfo = {
+      fullname: data.fullname,
+      email: data.email,
+      password: data.password,
+    };
+    await axios
+      .post("http://localhost:4007/user/signup", userInfo)
+      .then((res) => {
+        console.log(res.data);
+        if (res.data) {
+          toast.success("Signup Successfully");
+          navigate(from, { replace: true });
+        }
+        localStorage.setItem("Users", JSON.stringify(res.data.user));
+      })
+      .catch((err) => {
+        if (err.response) {
+          console.log(err);
+          toast.error("Error: " + err.response.data.message);
+        }
+      });
   };
-
   return (
     <>
-      <div className='flex items-center justify-center dark:bg-slate-900 dark:text-white'>
-        <div className="modal-box dark:bg-slate-900 dark:text-white mt-28 dark:bg-slate-900 dark:text-white">
-          <form method="dialog" className='dark:bg-slate-900 dark:text-white'>
-            {/* If there is a button in the form, it will close the modal */}
-            <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2 hover:border-black bg-white hover:bg-white">✕</button>
-          </form>
-          <h3 className="font-bold text-lg">SignUp</h3>
-          
-          {/* Form */}
-          <div>
-            <form onSubmit={handleSubmit(onSubmit)} className="bg-white rounded px-8 pt-6 pb-8 mb-6">
-              <div className="mb-4">
-                <label className="block text-gray-700 text-sm font-bold mb-2">
-                  Name
-                </label>
-                <input required {...register('name', { required: true })} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" placeholder="Name"/>
-              </div>
+      <div className="flex h-screen items-center justify-center dark:bg-slate-900 dark:text-white dark:border-white">
+        <div className=" w-[600px] ">
+          <div className="modal-box dark:bg-black dark:text-white dark:border-white">
+            <form onSubmit={handleSubmit(onSubmit)} method="dialog">
+              {/* if there is a button in form, it will close the modal */}
+              <Link
+                to="/"
+                className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
+              >
+                ✕
+              </Link>
 
+              <h3 className="font-bold text-lg">Signup</h3>
+              <div className="mt-4 space-y-2">
+                <span>Name</span>
+                <br />
+                <input
+                  type="text"
+                  placeholder="Enter your fullname"
+                  className="w-80 px-3 py-1 border rounded-md outline-none dark:bg-slate-900 dark:text-white dark:border-white"
+                  {...register("fullname", { required: true })}
+                />
+                <br />
+                {errors.fullname && (
+                  <span className="text-sm text-red-500">
+                    This field is required
+                  </span>
+                )}
+              </div>
               {/* Email */}
-              <div className="mb-6 mt-9"> 
-                <label className="block text-gray-700 text-sm font-bold mb-2">
-                  Email
-                </label>
-                <input required {...register('email', { required: true })} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder="Email"/>
+              <div className="mt-4 space-y-2">
+                <span>Email</span>
+                <br />
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="w-80 px-3 py-1 border rounded-md outline-none dark:bg-slate-900 dark:text-white dark:border-white"
+                  {...register("email", { required: true })}
+                />
+                <br />
+                {errors.email && (
+                  <span className="text-sm text-red-500">
+                    This field is required
+                  </span>
+                )}
               </div>
-              
               {/* Password */}
-              <div className="mb-6">
-                <label className="block text-gray-700 text-sm font-bold mb-2">
-                  Password
-                </label>
-                <input {...register('password', { required: true })} required className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="******************"/>
+              <div className="mt-4 space-y-2">
+                <span>Password</span>
+                <br />
+                <input
+                  type="text"
+                  placeholder="Enter your password"
+                  className="w-80 px-3 py-1 border rounded-md outline-none dark:bg-slate-900 dark:text-white dark:border-white"
+                  {...register("password", { required: true })}
+                />
+                <br />
+                {errors.password && (
+                  <span className="text-sm text-red-500">
+                    This field is required
+                  </span>
+                )}
               </div>
-
-              <div className="flex items-center justify-between">
-                <button className="bg-pink-500 hover:bg-pink-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+              {/* Button */}
+              <div className="flex justify-around mt-4">
+                <button className="bg-pink-500 text-white rounded-md px-3 py-1 hover:bg-pink-700 duration-200 dark:bg-slate-900 dark:text-white dark:border-white">
                   Signup
                 </button>
-                <p>Have an account? <a className="cursor-pointer align-baseline font-bold text-sm text-pink-500 hover:text-pink-800" onClick={() => document.getElementById('my_modal_3').showModal()}>Login</a></p>
+                <p className="text-xl">
+                  Have account?{" "}
+                  <button
+                    className="underline text-blue-500 cursor-pointer"
+                    onClick={() =>
+                      document.getElementById("my_modal_3").showModal()
+                    }
+                  >
+                    Login
+                  </button>{" "}
+                  <Login />
+                </p>
               </div>
             </form>
           </div>
